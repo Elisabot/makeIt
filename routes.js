@@ -10,3 +10,7 @@ Router.route('/', function () {
 Router.route('/add-item', function () {
    this.render('addItem');
 });
+
+Router.route('/add-project', function () {
+   this.render('addProject');
+});
