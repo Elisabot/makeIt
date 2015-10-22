@@ -1,26 +1,105 @@
 <head>
   <title>makeIt</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="container">
+</body>
+
+
+
+<template name="landingPage">
+  <i class="material-icons">settings</i>
+  {{> loginButtons}}
   <h1>Make It</h1>
   <p>An Application for Organizing Projects</p>
 
-</body>
-
-<template name="landingPage">
-{{> loginButtons}}
   <p>Landing Page</p>
-  <div class="card-panel teal lighten-2">This is a card panel with a teal lighten-2 class</div>
+
 </template>
+
+
 
 <template name="homePage">
 {{> loginButtons}}
   <p>homePage</p>
 </template>
 
+
 <template name="addItem">
 	<div class="container">
-      <div class="card-panel teal lighten-2">This is a card panel with a teal lighten-2 class</div>
+
+    <i class="material-icons">settings</i>
+
+    <form action="#">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input type="file" multiple>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Upload a file...">
+        </div>
+      </div>
+    </form>
+
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="itemName" class="materialize-textarea"></textarea>
+          <label for="itemName">Item Name</label>
+        </div>
+      </div>
+    </form>
+    </div>
+
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="itemLength" class="materialize-textarea"></textarea>
+          <label for="itemLength">Length</label>
+        </div>
+      </div>
+    </form>
+    </div>
+
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="itemWidth" class="materialize-textarea"></textarea>
+          <label for="itemWidth">Width</label>
+        </div>
+      </div>
+    </form>
+    </div>
+
+    <!-- let's get the materialize selector working when they've fixed the meteor bug -->
+    <!-- <div class="input-field col s12">
+      <select>
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <label>Materialize Select</label>
+    </div> -->
+
+    <label>Link to Project</label>
+    <select class="browser-default">
+      <option value="null">None</option>
+      <!-- populate with projects in the database as options -->
+      <option value="1">Project 1</option>
+    </select>
+
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
+
+    <button class="btn waves-effect red accent-2" type="" name="action">Cancel
+    </button>
+
   </div>
 </template>
