@@ -23,3 +23,5 @@ accounts-password
 materialize:materialize@=0.97.0
 iron:router
 useraccounts:materialize
+accounts-facebook
+accounts-google
